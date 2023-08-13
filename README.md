@@ -4,9 +4,9 @@ A minimal and practical example on how to use the [Queryfilter](https://github.c
 This is a minimal API implementation with a single endpoint, backed by a SQLite
 database.
 
-In this example we're pretending we're a Tshirt shop and we're offering various tshirts.
-Through the afore mentioned endpoint we're giving the user of our API the ability
-to filter on price, color and size.
+In this example we are pretending we run an online T-shirt shop and we are 
+offering various tshirts. Through the afore mentioned endpoint, we are giving 
+the user of our API the ability to filter on minimum and maximum price, color and size.
 
 ## Getting started
 
