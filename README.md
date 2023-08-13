@@ -26,9 +26,8 @@ in a separate terminal window, execute:
 make call
 ```
 
-__Note:__ optionally pipe it to JQ if installed on your system to have a more readable output:
+_Note:_ optionally pipe it to [`JQ`](https://jqlang.github.io/jq/) if installed on your system to have a more readable output:
 ```console
-```k
 make call | jq
 ```
 
