@@ -1,6 +1,6 @@
 # Queryfilter Example
 
-A minimal and practical example on how to use the Queryfilter library for Go.
+A minimal and practical example on how to use the [Queryfilter](https://github.com/tmw/queryfilter) library for Go.
 This is a minimal API implementation with a single endpoint, backed by a SQLite
 database.
 
