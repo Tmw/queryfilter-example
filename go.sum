@@ -13,3 +13,5 @@ github.com/tmw/queryfilter v0.0.0-20230714052224-21d09250d78a h1:9veVzmL2lH0kQGL
 github.com/tmw/queryfilter v0.0.0-20230714052224-21d09250d78a/go.mod h1:Sp94QkyXfSu5df1gwuWPtyQef+S51Q/whvXMy/Iu9rQ=
 github.com/tmw/queryfilter v0.0.0-20230809210712-4830eda341f4 h1:jksBsR/x7+fnqRTn6lqqA/FEWPyqUcayCE9tDxw37Ak=
 github.com/tmw/queryfilter v0.0.0-20230809210712-4830eda341f4/go.mod h1:IqtjuDxlByoo2hYHr5GyjI+tt7gPEq4I0E2aQEnDolg=
+github.com/tmw/queryfilter v0.0.0-20230814204626-4d8d3659d3ff h1:DAkmrAXHDg/Tg11oPeWGpIra/BxpqxouJi3wrbyce7A=
+github.com/tmw/queryfilter v0.0.0-20230814204626-4d8d3659d3ff/go.mod h1:IqtjuDxlByoo2hYHr5GyjI+tt7gPEq4I0E2aQEnDolg=
