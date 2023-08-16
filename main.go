@@ -39,6 +39,7 @@ func setupDatabase() (*sqlx.DB, error) {
 	// setup minimal table
 	db.MustExec(`
 		CREATE TABLE tshirts (
+		  id INTEGER PRIMARY KEY,
 		  color TEXT,
 		  size  TEXT,
 		  price INT
@@ -66,6 +67,7 @@ func setupDatabase() (*sqlx.DB, error) {
 }
 
 type Tshirt struct {
+	ID    int    `db:"id" json:"id"`
 	Color string `db:"color" json:"color"`
 	Size  Size   `db:"size"  json:"size"`
 	Price int    `db:"price" json:"price"`
@@ -78,7 +80,14 @@ func main() {
 	}
 	defer db.Close()
 
-	http.HandleFunc("/shirts", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/shirts", handleGetShirts(db))
+
+	log.Println("Server listening on localhost:8080")
+	log.Fatal(http.ListenAndServe(":8080", nil))
+}
+
+func handleGetShirts(db *sqlx.DB) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
 		sizes, colors, minPrice, maxPrice := parseQueryString(r.URL.Query())
 
 		// setting up the filter
@@ -102,11 +111,9 @@ func main() {
 			log.Fatal(err)
 		}
 
+		w.Header().Add("content-type", "application/json")
 		json.NewEncoder(w).Encode(results)
-	})
-
-	log.Println("Server listening on localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	}
 }
 
 func parseQueryString(query url.Values) ([]Size, []string, int, int) {
